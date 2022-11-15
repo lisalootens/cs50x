@@ -1,0 +1,2 @@
+# cs50x
+Harvard CS50x - my solutions
