@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+     <p>Current price of {{ quote.name }} ({{ quote.symbol }}) is ${{ '%0.2f'|format(quote.price|float) }}.</p>
+{% endblock %}

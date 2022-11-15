@@ -1,0 +1,52 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <h2>Your current cash balance is:</h2>
+    <p>
+        <ul>
+            <a class="nav-link" href="/addcash">Add money</a>
+        </ul>
+    </p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Stock</th>
+                    <th>Shares</th>
+                    <th>Current price</th>
+                    <th>Total value</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for share in shares %}
+                <tr>
+                    <td>{{ share["symbol"]}}</td>
+                    <td>{{ share["total_shares"]}}</td>
+                    <td>{{ lookup_values[share["symbol"]] | usd }}</td>
+                    <td>{{ (share["total_shares"] * lookup_values[share["symbol"]]) | usd }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="3" style="text-align: right;">
+                        <b>Balance</b>
+                    </td>
+                    <td>
+                        {{ cash | usd }}
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" style="text-align: right;">
+                        <b>Grand total</b>
+                    </td>
+                    <td>
+                        {{ grand_total | usd }}
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
+{% endblock %}

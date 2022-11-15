@@ -1,0 +1,227 @@
+body {
+    background-color: #fff;
+    color: #1d2024;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+.header {
+    background-color: #d4c6b8;
+    color: #fff;
+    margin-bottom: 2rem;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+}
+
+.column-img {
+    position: relative;
+    z-index: 1;
+    width: 80%;
+}
+
+.cropped {
+    position: relative;
+    z-index: 1;
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 50%;
+    margin-left: 10%;
+}
+
+.slide-img {
+    max-width: -webkit-fill-available;
+}
+
+.section {
+    padding: 0.5rem 2rem 1rem 2rem;
+}
+
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 200%;
+}
+
+h3 {
+  color: #b89c7f;
+}
+
+button, input[type="submit"] {
+    background-color: #d9edff;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+    font-size: 0.95rem;
+    font-weight: 400;
+    line-height: 1.5;
+    padding: 0.375rem 0.75rem;
+    text-align: center;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    vertical-align: middle;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px;
+}
+
+li {
+    display: inline-block;
+    margin-right: 1%;
+}
+
+a {
+    color: #b89c7f;
+}
+
+.taupe-background-block {
+    display: inline-block;
+    width: fit-contentpx;
+    height: fit-content;
+    padding: 5%;
+    background-color: #e6dfd8;
+    margin-left: 25%;
+    margin-top: -10%;
+}
+
+h2-b {
+    text-align: center;
+    margin-top: 50px;
+    color: #b89c7f;
+    text-transform: uppercase;
+}
+
+.form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+form .form-control {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.form-control {
+    background: transparant;
+    border: none;
+    outline:none;
+    border-bottom: 1px solid gray;
+    font-size: 0,5rem;
+    margin-bottom: 2%;
+}
+
+form .submit {
+    background: #d4c6b8;
+    border-color: transparant;
+    color: #fff;
+    font-size: 140%;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-top: 5%;
+    width: 90%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+form .submit:hover {
+    background-color: #b89c7f;
+    cursor: pointer;
+}
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: fit-content;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+.center {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 2%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
