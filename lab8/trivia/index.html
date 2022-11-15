@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // Check answers to questions
+            document.addEventListener('DOMContentLoaded', function() {
+
+                // Change colour to green when correct answer is clicked.
+                let correct = document.querySelector('.correct');
+                correct.addEventListener('click', function() {
+                    correct.style.backgroundColor = 'green';
+                    document.querySelector('#feedback1').innerHTML = ' Correct!'
+                });
+
+                // Change colour to red when wrong answer is clicked.
+                let incorrects = document.querySelectorAll('.incorrect');
+                for (let i = 0; i < incorrects.length; i++) {
+                    incorrects[i].addEventListener('click', function() {
+                        incorrects[i].style.backgroundColor = 'red';
+                        document.querySelector('#feedback1').innerHTML = 'Incorrect';
+                    });
+                }
+
+                // Check free response submission
+                document.querySelector('#check').addEventListener('click', function() {
+                    let input = document.querySelector('input');
+                    if (input.value === 'Innocence, my brother') {
+                        input.style.backgroundColor = 'green';
+                        document.querySelector('#feedback2').innerHTML = 'Correct!';
+                    } else {
+                        input.style.backgroundColor = 'red';
+                        document.querySelector('#feedback2').innerHTML = 'Incorrect';
+                    }
+                });
+            });
+        </script>
+
+    </head>
+    <body>
+        <div class="header">
+            <h1>Skyrim's Black Door</h1> http-server
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- Add multiple choice question -->
+                <h3>What is the music of life?</h3>
+                    <div><button class="incorrect">Um... the lute? No, drums!</div>
+                    <div><button class="incorrect">Screaming?</button></div>
+                    <div><button class="incorrect">Some kind of choir. With chanting.</button></div>
+                    <div><button class="correct">Silence, my brother.</button></div>
+
+                    <p id="feedback1"></p>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- Add free response question -->
+                <h3>What is life's greatest illusion?</h3>
+                    <input type="text"/>
+                    <button id="check">submit</button>
+
+                <p id="feedback2"></p>
+            </div>
+        </div>
+    </body>
+</html>

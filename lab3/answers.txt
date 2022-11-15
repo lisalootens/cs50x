@@ -1,0 +1,69 @@
+sort1 uses: Bubble
+
+How do you know?: slowest
+
+Random 10k
+real    0m0.558s
+user    0m0.257s
+sys     0m0.016s
+
+Reversed 10k
+real    0m0.414s
+user    0m0.189s
+sys     0m0.016s
+
+Random 50k
+real    0m15.968s
+user    0m6.544s
+sys     0m0.084s
+
+Reversed 50k
+real    0m12.493s
+user    0m4.680s
+sys     0m0.080s
+
+
+
+sort2 uses: Merge
+
+How do you know?: fastest
+
+Random 10k
+real    0m0.024s
+user    0m0.008s
+sys     0m0.016s
+
+Reversed 10k
+real    0m0.358s
+user    0m0.185s
+sys     0m0.020s
+
+
+Reversed 50k 
+real    0m6.646s
+user    0m0.038s
+sys     0m0.131s
+
+Random 50k
+real    0m3.471s
+user    0m0.024s
+sys     0m0.100s
+
+sort3 uses: Selection
+
+How do you know?: in between
+
+Random 10k
+real    0m0.215s
+user    0m0.099s
+sys     0m0.012s
+
+Random 50k
+real    0m7.109s
+user    0m2.432s
+sys     0m0.080s
+
+Reversed 50k
+real    0m6.847s
+user    0m2.506s
+sys     0m0.108s
